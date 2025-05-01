@@ -89,55 +89,101 @@ const calculadora = () => {
   }
 
   return (
-    <div>
+    <div className="container">
       <h1>Bienvenidos a la gran calculadora!</h1>
 
-      <Button number={1} onClick={addCurrent}></Button>
-      <Button number={2} onClick={addCurrent}></Button>
-      <Button number={3} onClick={addCurrent}></Button>
-      <Button number={4} onClick={addCurrent}></Button>
-      <Button number={6} onClick={addCurrent}></Button>
-      <Button number={7} onClick={addCurrent}></Button>
-      <Button number={8} onClick={addCurrent}></Button>
-      <Button number={9} onClick={addCurrent}></Button>
-      <Button number={0} onClick={addCurrent}></Button>
-      <br></br>
-      <Button operator="+" onClick={handleOperator}></Button>
-      <Button operator="-" onClick={handleOperator}></Button>
-      <Button operator="*" onClick={handleOperator}></Button>
-      <Button operator="/" onClick={handleOperator}></Button>
-      <button
-        style={{
-          padding: "1rem 2rem",
-          fontSize: "1.25rem",
-          width: "100%",
-          maxWidth: "300px",
-          color: "white",
-          border: "none",
-          borderRadius: "8px",
-          cursor: "pointer",
-          marginRight: "10px",
-        }}
-        onClick={handleEquals}
-      >
-        =
-      </button>
-      <button
-        style={{
-          padding: "1rem 2rem",
-          fontSize: "1.25rem",
-          width: "100%",
-          maxWidth: "300px",
-          color: "white",
-          border: "none",
-          borderRadius: "8px",
-          cursor: "pointer",
-          marginRight: "10px",
-        }}
-        onClick={handleReset}
-      >
-        C
-      </button>
+      <div className="row">
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button number={1} onClick={addCurrent}></Button>
+        </div>
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button number={2} onClick={addCurrent}></Button>
+        </div>
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button number={3} onClick={addCurrent}></Button>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button number={4} onClick={addCurrent}></Button>
+        </div>
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button number={5} onClick={addCurrent}></Button>
+        </div>
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button number={6} onClick={addCurrent}></Button>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button number={7} onClick={addCurrent}></Button>
+        </div>
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button number={8} onClick={addCurrent}></Button>
+        </div>
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button number={9} onClick={addCurrent}></Button>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button number={0} onClick={addCurrent}></Button>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button operator="+" onClick={handleOperator}></Button>
+        </div>
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button operator="-" onClick={handleOperator}></Button>
+        </div>
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button operator="*" onClick={handleOperator}></Button>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <Button operator="/" onClick={handleOperator}></Button>
+        </div>
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <button
+            style={{
+              padding: "1rem 2rem",
+              fontSize: "1.25rem",
+              width: "100%",
+              maxWidth: "300px",
+              color: "white",
+              border: "none",
+              borderRadius: "8px",
+              cursor: "pointer",
+              marginRight: "10px",
+            }}
+            onClick={handleEquals}
+          >
+            =
+          </button>
+        </div>
+        <div className="col-12 col-md-6 col-lg-4 p-3">
+          <button
+            style={{
+              padding: "1rem 2rem",
+              fontSize: "1.25rem",
+              width: "100%",
+              maxWidth: "300px",
+              color: "white",
+              border: "none",
+              borderRadius: "8px",
+              cursor: "pointer",
+              marginRight: "10px",
+            }}
+            onClick={handleReset}
+          >
+            C
+          </button>
+        </div>
+      </div>
 
       {operationResult !== null && (
         <h2>Resultado operación: {operationResult}</h2>
